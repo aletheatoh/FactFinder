@@ -44,6 +44,7 @@ select_state = Select(driver.find_element_by_xpath('//*[@id="state"]'))
 
 for i in range(1, len(geos)):
 
+
     select_state.select_by_value(geos[i])
 
     driver.implicitly_wait(50)
@@ -53,6 +54,8 @@ for i in range(1, len(geos)):
     print counties
 
     select_county = Select(driver.find_element_by_xpath('//*[@id="county"]'))
+
+    print len(counties)
 
     for j in range(1, len(counties)):
         time.sleep(2)
